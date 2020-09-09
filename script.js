@@ -10,12 +10,12 @@ let mouse = {
     radius: (canvas.height / 100) * (canvas.width / 100)
 }
 
-window.addEventListener("mousemove",
-    function(event) {
-        mouse.x = event.x,
-        mouse.y = event.y
-    }
-)
+// window.addEventListener("mousemove",
+//     function(event) {
+//         mouse.x = event.x,
+//         mouse.y = event.y
+//     }
+// )
 
 class Circle {
     constructor(x, y, directionX, directionY, size, color) {
@@ -30,7 +30,7 @@ class Circle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = '#5c5c5c';
+        ctx.fillStyle = '#b5b5b5';
         ctx.fill();
     }
 
@@ -72,14 +72,17 @@ class Circle {
 
 function init() {
     particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 8000;
+    let numberOfParticles = (canvas.height * canvas.width) / 20000;
     for(let i = 0; i < numberOfParticles; i++) {
-        let size = (Math.random() * 5) + 1;
+        // let size = (Math.random() * 5) + 1;
+
+        //fix size to 7 so all circles are same size.
+        let size = 6;
         let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
         let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
         let directionX = (Math.random() * 5) - 2.5;
         let directionY = (Math.random() * 5) - 2.5;
-        let color = '#5c5c5c';
+        let color = '#b5b5b5';
 
         particlesArray.push(new Circle(x, y, directionX, directionY, size, color));
     }
@@ -95,8 +98,8 @@ function connect() {
              (particlesArray[a].y - particlesArray[b].y));
 
             if (distance < (canvas.width/7) * (canvas.height/7)) {
-                ctx.strokeStyle = 'rgb(169,169,169)';
-                ctx.lineWidth = 2;
+                ctx.strokeStyle = 'rgb(191, 191, 191, 1)';
+                ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
                 ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
