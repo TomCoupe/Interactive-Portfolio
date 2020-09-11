@@ -30,7 +30,7 @@ class Circle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = '#0500ff';
+        ctx.fillStyle = '#a1a1a1';
         ctx.fill();
     }
 
@@ -77,12 +77,12 @@ function init() {
         // let size = (Math.random() * 5) + 1;
 
         //fix size to 7 so all circles are same size.
-        let size = 1;
+        let size = 2;
         let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
         let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
         let directionX = (Math.random() * 5) - 2.5;
         let directionY = (Math.random() * 5) - 2.5;
-        let color = '#0500ff';
+        let color = '#a1a1a1';
 
         particlesArray.push(new Circle(x, y, directionX, directionY, size, color));
     }
@@ -98,7 +98,7 @@ function connect() {
              (particlesArray[a].y - particlesArray[b].y));
 
             if (distance < (canvas.width/7) * (canvas.height/7)) {
-                ctx.strokeStyle = 'rgb(191, 191, 191, 1)';
+                ctx.strokeStyle = 'rgb(168, 168, 168, 1)';
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
