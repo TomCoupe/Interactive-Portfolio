@@ -10,12 +10,12 @@ let mouse = {
     radius: (canvas.height / 100) * (canvas.width / 100)
 }
 
-// window.addEventListener("mousemove",
-//     function(event) {
-//         mouse.x = event.x,
-//         mouse.y = event.y
-//     }
-// )
+window.addEventListener("mousemove",
+    function(event) {
+        mouse.x = event.x,
+        mouse.y = event.y
+    }
+)
 
 class Circle {
     constructor(x, y, directionX, directionY, size, color) {
@@ -72,7 +72,7 @@ class Circle {
 
 function init() {
     particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 10000;
+    let numberOfParticles = (canvas.height * canvas.width) / 8000;
     for(let i = 0; i < numberOfParticles; i++) {
         // let size = (Math.random() * 5) + 1;
 
