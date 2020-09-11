@@ -72,12 +72,12 @@ class Circle {
 
 function init() {
     particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 20000;
+    let numberOfParticles = (canvas.height * canvas.width) / 10000;
     for(let i = 0; i < numberOfParticles; i++) {
         // let size = (Math.random() * 5) + 1;
 
         //fix size to 7 so all circles are same size.
-        let size = 6;
+        let size = 1;
         let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
         let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
         let directionX = (Math.random() * 5) - 2.5;
