@@ -8,7 +8,7 @@
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background: '#ffffff'
+    background-color: '#ffffff';
 }
 #centerDiv {
     position: absolute;
@@ -26,6 +26,9 @@
     max-width: 100%;
     height: auto;
 }
+.text-white{
+    color: white;
+}
 .flex-row {
     display: flex;
     flex-wrap: wrap;
@@ -39,28 +42,28 @@
 }
 
 .link1 {
-    color: inherit;
+    color: white;
 }
 .link1:hover {
     color: #00a110;
 }
 
 .link2 {
-    color: inherit;
+    color: white;
 }
 .link2:hover {
     color: #0e76a8;
 }
 
 .link3 {
-    color: inherit;
+    color: white;
 }
 .link3:hover {
     color: hsl(27, 96%, 54%);
 }
 
 .link4 {
-    color: inherit;
+    color: white;
 }
 .link4:hover {
     color: #ff0000;

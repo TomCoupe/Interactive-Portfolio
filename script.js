@@ -7,7 +7,7 @@ let particlesArray;
 let mouse = {
     x: null,
     y: null,
-    radius: (canvas.height / 100) * (canvas.width / 100),
+    radius: (canvas.height / 110) * (canvas.width / 110),
 }
 
 window.addEventListener("mousemove",
@@ -30,7 +30,7 @@ class Circle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = '#a1a1a1';
+        ctx.fillStyle = '#b8b6b6';
         ctx.fill();
     }
 
@@ -72,17 +72,17 @@ class Circle {
 
 function init() {
     particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 8000;
+    let numberOfParticles = (canvas.height * canvas.width) / 7000;
     for(let i = 0; i < numberOfParticles; i++) {
-        // let size = (Math.random() * 5) + 1;
+        let size = (Math.random() * 2) + 1;
 
         //fix size to 7 so all circles are same size.
-        let size = 2;
+        // let size = 2;
         let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
         let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
         let directionX = (Math.random() * 5) - 2.5;
         let directionY = (Math.random() * 5) - 2.5;
-        let color = '#a1a1a1';
+        let color = '#b8b6b6';
 
         particlesArray.push(new Circle(x, y, directionX, directionY, size, color));
     }
@@ -98,7 +98,7 @@ function connect() {
              (particlesArray[a].y - particlesArray[b].y));
 
             if (distance < (canvas.width/7) * (canvas.height/7)) {
-                ctx.strokeStyle = 'rgb(168, 168, 168, 1)';
+                ctx.strokeStyle = 'rgb(184, 182, 182, 1)';
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
