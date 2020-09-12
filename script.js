@@ -72,7 +72,7 @@ class Circle {
 
 function init() {
     particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 7000;
+    let numberOfParticles = (canvas.height * canvas.width) / 10000;
     for(let i = 0; i < numberOfParticles; i++) {
         let size = (Math.random() * 2) + 1;
 
