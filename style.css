@@ -45,6 +45,7 @@
     color: white;
 }
 .link1:hover {
+    cursor: pointer;
     color: #00a110;
 }
 
@@ -52,6 +53,7 @@
     color: white;
 }
 .link2:hover {
+    cursor: pointer;
     color: #0e76a8;
 }
 
@@ -59,6 +61,7 @@
     color: white;
 }
 .link3:hover {
+    cursor: pointer;
     color: hsl(27, 96%, 54%);
 }
 
@@ -66,5 +69,6 @@
     color: white;
 }
 .link4:hover {
+    cursor: pointer;
     color: #ff0000;
 }
